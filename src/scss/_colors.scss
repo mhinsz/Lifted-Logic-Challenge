@@ -1,0 +1,31 @@
+/* Color Variables
+-------------------------------------------------------------- */
+$white: #fff;
+$gray: #777777;
+$gray-light: #F6F6F6;
+$black: #000000;
+$green: #42A418;
+$green-pale: #D9F0D0;
+$blue: #001D5D;
+$blue-pale: #B8BFCF;
+
+/* Color Classes
+-------------------------------------------------------------- */
+.white {
+  background-color: $white;
+}
+.white-text {
+  color: $white;
+}
+.gray-light {
+  background-color: $gray-light;
+}
+.green-text {
+  color: $green;
+}
+.blue {
+  background-color: $blue;
+}
+.blue-text {
+  color: $blue;
+}

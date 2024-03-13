@@ -1,0 +1,65 @@
+/* Footer
+-------------------------------------------------------------- */
+footer {
+  position: relative;
+  padding: 5rem 0.875rem;
+  background-color: $blue;
+  color:$white;
+  line-height: 1.625em;
+  z-index: 10;
+  @include MQ(maxM) {
+    padding: 1rem 0.875rem;
+  }
+  .row {
+    @include MQ(maxM) {
+      flex-direction: column;
+    }
+  }
+  .container {
+    position: relative;
+  }
+  p {
+    margin: 0 0 1em;
+  }
+  .heading {
+    text-transform: uppercase;
+    margin-bottom: 1.5em;
+  }
+  img {
+    max-width: 168px;
+    margin-bottom: 1.5em;
+  }
+  .policies {
+    display: flex;
+    margin: 1rem 1.75rem;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    @include MQ(maxM) {
+      flex-direction: column;
+      margin: 1rem 0;
+    }
+    p {
+      display: inline-block;
+      margin-right: 2rem;
+    }
+  }
+  .social-icons {
+    display: flex;
+    margin: 0 0 1.75em;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    .icon {
+		    max-width: 24px;
+        padding:1rem 1.25rem 1rem 0;
+        filter: invert(100%);
+
+    }
+  }
+  .social-icons, .policies {
+    @include MQ(maxM) {
+      position: relative;
+    }
+  }
+}

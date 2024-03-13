@@ -1,0 +1,228 @@
+#hero {
+  width: 100vw;
+  height:100vh;
+  position: relative;
+  overflow: hidden;
+  .bg-image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-size:cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("../images/hero-img.webp");
+    animation: background-zoom 8s infinite alternate ease-in-out;
+    @keyframes background-zoom {
+      from  {transform: scale(1);}
+      to    {transform: scale(1.2);}
+    }
+  }
+  .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    h1,p {
+        color: $white;
+        max-width: 50%;
+        @include MQ(maxL) {
+          max-width: 100%;
+        }
+    }
+    a {
+      color: $white;
+      font-weight: 700;
+    }
+    .play-btn {
+      background: $white;
+      border-radius: 100%;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 15px;
+      img{
+        filter: invert(8%) sepia(96%) saturate(3023%) hue-rotate(218deg) brightness(86%) contrast(104%);
+        width:24px;
+        padding:1rem;
+      }
+    }
+  }
+}
+#featured {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5em;
+    @include MQ(maxL) {
+      flex-direction: column;
+      padding: 1rem 0;
+    }
+  }
+  .image {
+    overflow: hidden;
+    width: 50%;
+    padding: 0 $paddHoriz;
+    box-sizing: border-box;
+    background-size:cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("../images/featured-img.webp");
+    @include MQ(maxL) {
+      background: none;
+    }
+    img {
+      display: none;
+      @include MQ(maxL) {
+        display: block;
+      }
+    }
+    @include MQ(maxL) {
+      width: 100%;
+    }
+  }
+  .copy {
+    width: 50%;
+    padding: 0 $paddHoriz;
+    box-sizing: border-box;
+    align-self: center;
+    @include MQ(maxL) {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+}
+#new-releases {
+  padding-bottom: 2rem;
+  .headline {
+    padding:2rem 1rem 5rem;
+    text-align: center;
+    width: 40%;
+    @include MQ(maxL) {
+      width: 50%;
+    }
+    @include MQ(maxM) {
+      width: 100%;
+    }
+  }
+  .card-container {
+    display: flex;
+    overflow-x: auto;
+    position: relative;
+    justify-content: space-between;
+  }
+  .card-container::-webkit-scrollbar {
+    display: none;
+  }
+  .card-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .card {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    width: 33vw;
+    padding: 1em;
+    opacity: .5;
+    transition: all .5s;
+    @include MQ(maxL) {
+      width: 100vw;
+    }
+    cursor: pointer;
+    .contain {
+      display: flex;
+      flex: 0 0 auto;
+      box-sizing: border-box;
+      padding:2rem 1rem;
+      background: $white;
+      box-shadow: #eee 0px 0px 20px;
+    }
+    &.current {
+      opacity: 1;
+      transform: scale(1.025);
+    }
+    .album-img {
+      width: 33%;
+    }
+    .copy {
+      width: 67%;
+      padding-left: 1rem;
+      font-size: 14px;
+      .artist {
+        color:$green;
+        text-transform: uppercase;
+        font-size: 16px;
+        margin:10px 0;
+      }
+    }
+  }
+  .slider-btns {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+  .prev-btn, .next-btn {
+    background: $blue-pale;
+    border-radius: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    cursor: pointer;
+    img{
+      filter: invert(8%) sepia(96%) saturate(3023%) hue-rotate(218deg) brightness(86%) contrast(104%);
+      width:16px;
+      padding:1rem;
+    }
+    &:hover {
+      background: $blue;
+      img{
+        filter: invert(100%);
+      }
+    }
+  }
+}
+#map {
+  padding:0;
+}
+#contact {
+  padding: 0;
+  .form {
+    width: 60%;
+    padding:3em 5em;
+    box-sizing: border-box;
+    @include MQ(maxL) {
+      padding:2em 1em;
+    }
+    .contact-form {
+      display: flex;
+      flex-wrap: wrap;
+      div {
+        box-sizing: border-box;
+        padding:0 2rem 0 0;
+      }
+    }
+    @include MQ(maxL) {
+      width: 100%;
+    }
+  }
+  .image {
+    width: 40%;
+    background-size: cover;
+    background-position: center center;
+    background-image: url("../images/contact-img.webp");
+    background-repeat: no-repeat;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    @include MQ(maxL) {
+      display: none;
+    }
+  }
+}

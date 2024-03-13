@@ -1,0 +1,104 @@
+$paddVerti: 1.075rem;
+$paddHoriz: 1.875rem;
+$padd: $paddVerti $paddHoriz;
+
+html {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+body {
+  overflow-x: hidden;
+  height: 100%;
+  color: $black;
+  margin: 0;
+  padding: 0;
+}
+::before, ::after {
+ box-sizing: border-box;
+}
+section {
+  position: relative;
+}
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+.container,
+.container-fluid, {
+  width:100%;
+  padding-right:1.375rem;
+  padding-left:1.375rem;
+  margin-right:auto;
+  margin-left:auto;
+  box-sizing: border-box;
+}
+.row {
+  display: flex;
+}
+.col-1-5 {
+  width: 20%;
+  @include MQ(maxM) {
+    width: 100%;
+  }
+}
+.half-col {
+  width: 50%;
+  @include MQ(maxM) {
+    width: 100%;
+  }
+}
+.full-col {
+  width: 100%;
+}
+.col-full-s {
+  @include MQ(maxS) {
+    width: 100%;
+  }
+}
+.col-full-m {
+  @include MQ(maxM) {
+    width: 100%;
+  }
+}
+.col-full-l {
+  @include MQ(maxL) {
+    width: 100%;
+  }
+}
+@media (min-width:576px) {
+  .container {
+    max-width:540px
+  }
+}
+@media (min-width:768px) {
+  .container {
+    max-width:720px
+  }
+}
+@media (min-width:992px) {
+  .container {
+    max-width:960px
+  }
+}
+@media (min-width:1200px) {
+  .container {
+    max-width:1140px
+  }
+}
+@media only screen and (min-width: 1550px) {
+  .container {
+    max-width: 1500px;
+  }
+}
+.row:before, .row:after {
+    display: inline-block;
+}
+hr {
+  border: none;
+  background: $white;
+  height: 1px;
+  margin: 2rem 0 0 0;
+}

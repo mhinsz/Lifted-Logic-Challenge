@@ -1,0 +1,29 @@
+a,
+a:active,
+a:focus {
+  color: $blue;
+  text-decoration: none;
+  outline: none;
+  &:hover {
+
+  }
+}
+button, input[type="submit"] {
+  cursor: pointer;
+  text-transform: capitalize;
+  color:$green;
+  background:$green-pale;
+  border:none;
+  padding:$padd;
+  font-size: 1rem;
+  width: auto;
+  margin-top: 1rem;
+  transition: all .5s;
+  box-shadow: $white 0px 0px 10px;
+  &:hover {
+    color: $white;
+    background: $green;
+    transform: scale(1.05);
+    box-shadow: $green 0px 0px 10px;
+  }
+}

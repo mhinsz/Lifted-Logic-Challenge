@@ -1,0 +1,29 @@
+/* = Global Form Fields
+-------------------------------------------------------------- */
+select,
+input,
+textarea {
+  width: auto;
+  appearance: none;
+  padding: 1rem;
+  margin: 0 0.25rem -0.2rem 0;
+  background-color: $white;
+  border: 1px $gray solid;
+  color: $gray;
+  width:100%;
+  &:focus {
+    border: 1px $blue solid;
+    color: $blue;
+    outline: none;
+  }
+}
+
+label {
+  box-sizing: border-box;
+  display: block;
+  text-align: left;
+  transition: all 0.2s ease-out;
+  user-select: none;
+  z-index: 1;
+  padding:1.5rem 0 .5rem;
+}

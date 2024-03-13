@@ -1,0 +1,61 @@
+/* Font variables
+-------------------------------------------------------------- */
+$sans: "Inter", sans-serif;
+
+/* Font Classes
+-------------------------------------------------------------- */
+.sans {
+  font-family: $sans;
+}
+
+body {
+  font-family: $sans;
+}
+
+/* Elements
+-------------------------------------------------------------- */
+body {
+  font-size: 16px;
+  line-height: 1.5em;
+  font-family: $sans;
+  font-weight: 400;
+  color:$gray;
+  @include MQ(L) {
+
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.25em;
+  color: $blue;
+}
+
+h1 {
+  font-size: 64px;
+  @include MQ(L) {
+
+  }
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+h4 {
+  font-size: 32px;
+}
+
+h5 {
+  font-size: 24px;
+}
+
+h6 {
+  font-size: 20px;
+  line-height: 1.2em;
+}

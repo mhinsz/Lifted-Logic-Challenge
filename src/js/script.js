@@ -20,11 +20,6 @@ $(document).ready(function(){
     $('.card-container').animate({scrollLeft: cardOffset}, 0);
   }
 
-  $('.card').click(function(){
-    $('.card').removeClass('current');
-    $(this).addClass('current');
-  });
-
   $('.prev-btn').click(function(){
     //$('.card:last').clone().prependTo('.card-container');
     $('.card-container').animate({scrollLeft: $('.card-container').scrollLeft()-cardW}, 500);
